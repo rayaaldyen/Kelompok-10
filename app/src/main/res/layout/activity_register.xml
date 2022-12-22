@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="360dp"
+    android:layout_height="570dp"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bgcolor4"
+    android:fitsSystemWindows="true"
+    android:elevation="15dp"
+    tools:context=".Register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="155dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="155dp"
+            app:cardCornerRadius="250dp"
+            app:cardBackgroundColor="@color/white">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="250dp"
+                android:elevation="15dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:errorEnabled="true"
+            android:id="@+id/textInputLayoutUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextUserName"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/layout_bg"
+                android:layout_width="310dp"
+                android:layout_height="45dp"
+                android:hint="  Username"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="310dp"
+                android:background="@drawable/layout_bg"
+                android:layout_height="45dp"
+                android:hint="  Email"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPassword"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="310dp"
+                android:background="@drawable/layout_bg"
+                android:layout_height="45dp"
+                android:hint="  Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            app:backgroundTint="#4B1F0E"
+            android:elevation="10dp"
+            android:text="Register" />
+
+        <TextView
+            android:id="@+id/textViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Back To Login"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

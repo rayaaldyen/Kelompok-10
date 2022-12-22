@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+
+
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/my_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/transaksi"
+                android:layout_width="315dp"
+                android:layout_height="250dp"
+                android:layout_marginLeft="47dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/bgcolor2"
+                android:elevation="20dp"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/my_drawer_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/barang2" />
+
+            <ImageButton
+                android:id="@+id/kelola"
+                android:layout_width="315dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="400dp"
+                android:layout_marginLeft="-315dp"
+                android:layout_marginBottom="-60dp"
+                android:foregroundGravity="center"
+                android:background="@drawable/bgcolor2"
+                android:elevation="20dp"
+                app:srcCompat="@drawable/barang"
+                app:layout_constraintBottom_toTopOf="@+id/my_drawer_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+        <!-- this the navigation view which draws and shows the navigation drawer -->
+        <!-- include the menu created in the menu folder -->
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/navigation_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
